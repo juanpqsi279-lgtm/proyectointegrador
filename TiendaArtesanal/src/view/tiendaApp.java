@@ -31,7 +31,7 @@ public class tiendaApp {
         catalogoModel.addElement(new producto("Perez", 210000));
         catalogoModel.addElement(new producto("Laptop de Perez", 10));
         catalogoModel.addElement(new producto("Cable artesanal", 100));
-        catalogoModel.addElement(new producto("Blindaje artesanal", 4500000));
+        catalogoModel.addElement(new producto("Blindaje artesanal", 4500000 ));
         JList<producto> listaCatalogo = new JList<>(catalogoModel);
 
         // Carrito
