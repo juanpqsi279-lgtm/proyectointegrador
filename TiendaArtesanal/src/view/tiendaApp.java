@@ -50,6 +50,16 @@ public class tiendaApp {
             carritoModel.clear();
         });
 
+        // Botón eliminar
+        JButton btnEliminar = new JButton("Eliminar del carrito");
+        btnEliminar.addActionListener(e -> {
+            producto seleccionado = listaCarrito.getSelectedValue();
+            if (seleccionado != null) {
+                controller.eliminarProducto(seleccionado);
+                carritoModel.removeElement(seleccionado);
+            }
+        });
+
         // Paneles
         JPanel panelCatalogo = new JPanel(new BorderLayout());
         panelCatalogo.add(new JLabel("Catálogo"), BorderLayout.NORTH);
@@ -59,7 +69,13 @@ public class tiendaApp {
         JPanel panelCarrito = new JPanel(new BorderLayout());
         panelCarrito.add(new JLabel("Carrito"), BorderLayout.NORTH);
         panelCarrito.add(new JScrollPane(listaCarrito), BorderLayout.CENTER);
-        panelCarrito.add(btnFinalizar, BorderLayout.SOUTH);
+
+        // Panel de botones del carrito
+        JPanel panelBotonesCarrito = new JPanel(new GridLayout(1, 2));
+        panelBotonesCarrito.add(btnEliminar);
+        panelBotonesCarrito.add(btnFinalizar);
+
+        panelCarrito.add(panelBotonesCarrito, BorderLayout.SOUTH);
 
         ventana.add(panelCatalogo);
         ventana.add(panelCarrito);

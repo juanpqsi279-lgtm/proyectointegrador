@@ -29,4 +29,9 @@ public class tiendaController {
     public ArrayList<producto> getCarrito() {
         return carrito;
     }
+
+    public void eliminarProducto(producto p) {
+    carrito.remove(p);
+}
+
 }
