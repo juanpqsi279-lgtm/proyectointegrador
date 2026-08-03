@@ -25,6 +25,13 @@ public class tiendaApp {
         catalogoModel.addElement(new producto("Pulsera tejida", 50));
         catalogoModel.addElement(new producto("Collar artesanal", 120));
         catalogoModel.addElement(new producto("Bolsa bordada", 300));
+        catalogoModel.addElement(new producto("Vesícula de Macías", 5600000));
+        catalogoModel.addElement(new producto("Grecia", 88000));
+        catalogoModel.addElement(new producto("Uriel", 1));
+        catalogoModel.addElement(new producto("Perez", 210000));
+        catalogoModel.addElement(new producto("Laptop de Perez", 10));
+        catalogoModel.addElement(new producto("Cable artesanal", 100));
+        catalogoModel.addElement(new producto("Blindaje artesanal", 4500000));
         JList<producto> listaCatalogo = new JList<>(catalogoModel);
 
         // Carrito
@@ -89,7 +96,7 @@ public class tiendaApp {
         ventana.add(panelCatalogo);
         ventana.add(panelCarrito);
 
-        // 🎨 Estilos cálidos
+        // Colores de interfaz
         ventana.getContentPane().setBackground(new Color(245, 222, 179)); // fondo beige cálido
         panelCatalogo.setBackground(new Color(222, 184, 135)); // café claro
         panelCarrito.setBackground(new Color(222, 184, 135));
