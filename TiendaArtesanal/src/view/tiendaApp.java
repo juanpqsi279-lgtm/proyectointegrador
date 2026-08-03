@@ -62,23 +62,51 @@ public class tiendaApp {
 
         // Paneles
         JPanel panelCatalogo = new JPanel(new BorderLayout());
-        panelCatalogo.add(new JLabel("Catálogo"), BorderLayout.NORTH);
+        JPanel panelCarrito = new JPanel(new BorderLayout());
+
+        // Etiquetas personalizadas
+        JLabel lblCatalogo = new JLabel("Catálogo");
+        lblCatalogo.setFont(new Font("Arial", Font.BOLD, 16));
+        lblCatalogo.setHorizontalAlignment(SwingConstants.CENTER);
+
+        JLabel lblCarrito = new JLabel("Carrito");
+        lblCarrito.setFont(new Font("Arial", Font.BOLD, 16));
+        lblCarrito.setHorizontalAlignment(SwingConstants.CENTER);
+
+        panelCatalogo.add(lblCatalogo, BorderLayout.NORTH);
         panelCatalogo.add(new JScrollPane(listaCatalogo), BorderLayout.CENTER);
         panelCatalogo.add(btnAgregar, BorderLayout.SOUTH);
 
-        JPanel panelCarrito = new JPanel(new BorderLayout());
-        panelCarrito.add(new JLabel("Carrito"), BorderLayout.NORTH);
+        panelCarrito.add(lblCarrito, BorderLayout.NORTH);
         panelCarrito.add(new JScrollPane(listaCarrito), BorderLayout.CENTER);
 
         // Panel de botones del carrito
         JPanel panelBotonesCarrito = new JPanel(new GridLayout(1, 2));
         panelBotonesCarrito.add(btnEliminar);
         panelBotonesCarrito.add(btnFinalizar);
-
         panelCarrito.add(panelBotonesCarrito, BorderLayout.SOUTH);
 
         ventana.add(panelCatalogo);
         ventana.add(panelCarrito);
+
+        // 🎨 Estilos cálidos
+        ventana.getContentPane().setBackground(new Color(245, 222, 179)); // fondo beige cálido
+        panelCatalogo.setBackground(new Color(222, 184, 135)); // café claro
+        panelCarrito.setBackground(new Color(222, 184, 135));
+
+        listaCatalogo.setFont(new Font("Arial", Font.BOLD, 14));
+        listaCatalogo.setBackground(new Color(255, 250, 240)); // crema
+        listaCarrito.setFont(new Font("Arial", Font.PLAIN, 14));
+        listaCarrito.setBackground(new Color(255, 250, 240));
+
+        btnAgregar.setBackground(new Color(210, 180, 140)); // madera clara
+        btnAgregar.setForeground(Color.BLACK);
+
+        btnEliminar.setBackground(new Color(205, 133, 63)); // café medio
+        btnEliminar.setForeground(Color.WHITE);
+
+        btnFinalizar.setBackground(new Color(139, 69, 19)); // café oscuro
+        btnFinalizar.setForeground(Color.WHITE);
 
         ventana.setVisible(true);
     }
