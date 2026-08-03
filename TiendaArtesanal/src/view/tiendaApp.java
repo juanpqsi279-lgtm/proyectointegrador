@@ -25,14 +25,54 @@ public class tiendaApp {
         catalogoModel.addElement(new producto("Pulsera tejida", 50));
         catalogoModel.addElement(new producto("Collar artesanal", 120));
         catalogoModel.addElement(new producto("Bolsa bordada", 300));
-        catalogoModel.addElement(new producto("Vesícula de Macías", 5600000));
-        catalogoModel.addElement(new producto("Grecia", 88000));
-        catalogoModel.addElement(new producto("Uriel", 1));
-        catalogoModel.addElement(new producto("Perez", 210000));
-        catalogoModel.addElement(new producto("Laptop de Perez", 10));
-        catalogoModel.addElement(new producto("Cable artesanal", 100));
-        catalogoModel.addElement(new producto("Blindaje artesanal", 4500000 ));
+        catalogoModel.addElement(new producto("Taza artesanal", 200));
+        catalogoModel.addElement(new producto("Cuadro pintado a mano", 500));
+        catalogoModel.addElement(new producto("Jarrón de cerámica", 400));
+        catalogoModel.addElement(new producto("Atrapasueños", 150));
+        catalogoModel.addElement(new producto("Velas aromaticas artesanales", 250));
         JList<producto> listaCatalogo = new JList<>(catalogoModel);
+
+        // Mostrar imagen junto al nombre del producto
+listaCatalogo.setCellRenderer(new DefaultListCellRenderer() {
+    @Override
+    public Component getListCellRendererComponent(JList<?> list, Object value,
+            int index, boolean isSelected, boolean cellHasFocus) {
+        JLabel label = (JLabel) super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
+        producto p = (producto) value;
+
+        // Asignar imagen según producto
+        String nombre = p.getNombre().toLowerCase();
+        ImageIcon icon = null;
+
+        if (nombre.contains("pulsera")) {
+            icon = new ImageIcon("src/images/pulsera.png");
+        } else if (nombre.contains("collar")) {
+            icon = new ImageIcon("src/images/collar.png");
+        } else if (nombre.contains("bolsa")) {
+            icon = new ImageIcon("src/images/bolsa.png");
+        } else if (nombre.contains("taza")) {
+            icon = new ImageIcon("src/images/taza.png");
+        } else if (nombre.contains("cuadro")) {
+            icon = new ImageIcon("src/images/cuadro.jpg");
+        } else if (nombre.contains("jarrón")) {
+            icon = new ImageIcon("src/images/jarron.png");
+        } else if (nombre.contains("atrapasueños")) {
+            icon = new ImageIcon("src/images/atrapasueños.png");
+        } else if (nombre.contains("vela")) {
+            icon = new ImageIcon("src/images/Velas.png");
+        }
+
+        // Escalar imagen para que se vea uniforme
+        if (icon != null) {
+            Image img = icon.getImage().getScaledInstance(40, 40, Image.SCALE_SMOOTH);
+            label.setIcon(new ImageIcon(img));
+        }
+
+        label.setHorizontalTextPosition(SwingConstants.RIGHT);
+        return label;
+    }
+});
+
 
         // Carrito
         carritoModel = new DefaultListModel<>();
