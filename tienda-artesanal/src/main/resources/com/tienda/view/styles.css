@@ -1,0 +1,270 @@
+/* ==========================================================================
+   HOJA DE ESTILOS MODERNA - TIENDA ARTESANAL (JavaFX)
+   Paleta: Terracota (#C85A32), Crema (#FDFBF7), Espléndido (#2C1E16), Oliva (#5E6F52)
+   ========================================================================== */
+
+.root {
+    -fx-font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+    -fx-font-size: 14px;
+    -fx-background-color: #F8F5F0;
+    
+    /* Variables de Paleta de Colores */
+    -color-primary: #C85A32;
+    -color-primary-dark: #A34423;
+    -color-primary-light: #F7EBE6;
+    -color-bg-main: #F8F5F0;
+    -color-bg-card: #FFFFFF;
+    -color-bg-sidebar: #2C1E16;
+    -color-text-dark: #2C1E16;
+    -color-text-muted: #6E6862;
+    -color-accent-gold: #D99B26;
+    -color-accent-green: #5E6F52;
+    -color-border: #E5DEC9;
+}
+
+/* --- SIDEBAR LATERAL DE NAVEGACIÓN --- */
+.sidebar {
+    -fx-background-color: #2C1E16;
+    -fx-padding: 24 16 24 16;
+    -fx-pref-width: 250px;
+}
+
+.brand-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-fill: #FDFBF7;
+}
+
+.brand-subtitle {
+    -fx-font-size: 12px;
+    -fx-fill: #D99B26;
+}
+
+.nav-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #D3C9BE;
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-padding: 12 16 12 16;
+    -fx-background-radius: 10px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-cursor: hand;
+}
+
+.nav-button:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.08);
+    -fx-text-fill: #FDFBF7;
+}
+
+.nav-button-active {
+    -fx-background-color: #C85A32;
+    -fx-text-fill: #FFFFFF;
+}
+
+.nav-badge {
+    -fx-background-color: #D99B26;
+    -fx-text-fill: #2C1E16;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-padding: 2 8 2 8;
+    -fx-background-radius: 12px;
+}
+
+/* --- HEADER SUPERIOR --- */
+.header-bar {
+    -fx-background-color: #FFFFFF;
+    -fx-padding: 16 28 16 28;
+    -fx-border-color: #E8E2D5;
+    -fx-border-width: 0 0 1 0;
+}
+
+.header-title {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2C1E16;
+}
+
+.header-subtitle {
+    -fx-font-size: 13px;
+    -fx-text-fill: #6E6862;
+}
+
+/* --- CONTENEDOR PRINCIPAL Y PANELES --- */
+.content-area {
+    -fx-padding: 24px;
+    -fx-background-color: #F8F5F0;
+}
+
+.section-card {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 14px;
+    -fx-padding: 24px;
+    -fx-effect: dropshadow(three-pass-box, rgba(44, 30, 22, 0.05), 10, 0, 0, 4);
+}
+
+/* --- TARJETAS DE PRODUCTOS (CATÁLOGO) --- */
+.product-card {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 14px;
+    -fx-padding: 16px;
+    -fx-border-color: #EDE7DC;
+    -fx-border-radius: 14px;
+    -fx-border-width: 1px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.04), 8, 0, 0, 3);
+}
+
+.product-card:hover {
+    -fx-border-color: #C85A32;
+    -fx-effect: dropshadow(three-pass-box, rgba(200, 90, 50, 0.15), 14, 0, 0, 6);
+}
+
+.product-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2C1E16;
+}
+
+.product-artisan {
+    -fx-font-size: 12px;
+    -fx-text-fill: #6E6862;
+    -fx-font-style: italic;
+}
+
+.product-price {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #C85A32;
+}
+
+.badge-category {
+    -fx-background-color: #F7EBE6;
+    -fx-text-fill: #C85A32;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-padding: 4 10 4 10;
+    -fx-background-radius: 20px;
+}
+
+.badge-stock-in {
+    -fx-background-color: #EAF3E6;
+    -fx-text-fill: #5E6F52;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-padding: 4 10 4 10;
+    -fx-background-radius: 20px;
+}
+
+.badge-stock-out {
+    -fx-background-color: #FCE8E6;
+    -fx-text-fill: #C53030;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-padding: 4 10 4 10;
+    -fx-background-radius: 20px;
+}
+
+/* --- BOTONES --- */
+.btn-primary {
+    -fx-background-color: #C85A32;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+    -fx-padding: 10 20 10 20;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+}
+
+.btn-primary:hover {
+    -fx-background-color: #A34423;
+}
+
+.btn-secondary {
+    -fx-background-color: #EFEBE4;
+    -fx-text-fill: #2C1E16;
+    -fx-font-weight: 600;
+    -fx-padding: 10 20 10 20;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+}
+
+.btn-secondary:hover {
+    -fx-background-color: #E2DBD0;
+}
+
+.btn-success {
+    -fx-background-color: #5E6F52;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+    -fx-padding: 12 24 12 24;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+}
+
+.btn-success:hover {
+    -fx-background-color: #49583F;
+}
+
+.btn-filter {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #6E6862;
+    -fx-border-color: #DDD6C7;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-padding: 6 16 6 16;
+    -fx-cursor: hand;
+}
+
+.btn-filter-active {
+    -fx-background-color: #2C1E16;
+    -fx-text-fill: #FFFFFF;
+    -fx-border-color: #2C1E16;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+}
+
+/* --- FORMULARIOS --- */
+.text-field, .text-area, .combo-box {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #DDD6C7;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 8 12 8 12;
+}
+
+.text-field:focused, .text-area:focused, .combo-box:focused {
+    -fx-border-color: #C85A32;
+    -fx-border-width: 2px;
+}
+
+.form-label {
+    -fx-font-weight: 600;
+    -fx-text-fill: #2C1E16;
+    -fx-font-size: 13px;
+}
+
+/* --- TABLAS Y CARRITO --- */
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-color: #E5DEC9;
+    -fx-border-radius: 8px;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #F2EDE4;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2C1E16;
+}
+
+/* --- TOAST NOTIFICATIONS --- */
+.toast-notification {
+    -fx-background-color: #2C1E16;
+    -fx-text-fill: #FDFBF7;
+    -fx-padding: 14 24 14 24;
+    -fx-background-radius: 12px;
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.25), 12, 0, 0, 5);
+}
