@@ -67,9 +67,9 @@ public class PerfilVendedorPanel extends ScrollPane {
         // Stats Cards
         HBox statsBox = new HBox(16);
         statsBox.getChildren().addAll(
-            crearStatCard("⭐ Calificación Taller", String.format("%.1f / 5.0", vendedor.getCalificacion()), "#D99B26"),
-            crearStatCard("📦 Productos Activos", String.valueOf(vendedor.getProductosEnVenta().size()), "#C85A32"),
-            crearStatCard("🏷️ Registro Artesano", vendedor.getId(), "#5E6F52")
+            crearStatCard("Calificación Taller", String.format("%.1f / 5.0", vendedor.getCalificacion()), "#D99B26"),
+            crearStatCard("Productos Activos", String.valueOf(vendedor.getProductosEnVenta().size()), "#C85A32"),
+            crearStatCard("Registro Artesano", vendedor.getId(), "#5E6F52")
         );
 
         Label lblHistoria = new Label("Reseña del Taller: " + vendedor.getHistoriaTaller());
@@ -82,7 +82,7 @@ public class PerfilVendedorPanel extends ScrollPane {
         VBox cardPublicar = new VBox(16);
         cardPublicar.getStyleClass().add("section-card");
 
-        Label lblTituloForm = new Label("✨ Publicar Nueva Pieza Artesanal");
+        Label lblTituloForm = new Label("Publicar Nueva Pieza Artesanal");
         lblTituloForm.setStyle("-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #2C1E16;");
 
         GridPane gridForm = new GridPane();
@@ -123,7 +123,7 @@ public class PerfilVendedorPanel extends ScrollPane {
         gridForm.add(spinStock, 1, 4);
 
         Label lblImg = new Label("Imagen del Producto:");
-        Button btnImagen = new Button("📁 Seleccionar Imagen...");
+        Button btnImagen = new Button("Seleccionar Imagen...");
         btnImagen.getStyleClass().add("btn-secondary");
         lblImagenSeleccionada = new Label("Ninguna imagen seleccionada");
         lblImagenSeleccionada.setStyle("-fx-font-size: 12px; -fx-text-fill: #6E6862; -fx-font-style: italic;");
@@ -148,7 +148,7 @@ public class PerfilVendedorPanel extends ScrollPane {
         gridForm.add(lblImg, 0, 5);
         gridForm.add(imageBox, 1, 5);
 
-        Button btnPublicar = new Button("🚀 Publicar en el Mercado");
+        Button btnPublicar = new Button("Publicar en el Mercado");
         btnPublicar.getStyleClass().add("btn-success");
         btnPublicar.setOnAction(e -> procesarPublicacion());
 
@@ -158,7 +158,7 @@ public class PerfilVendedorPanel extends ScrollPane {
         VBox cardProductos = new VBox(16);
         cardProductos.getStyleClass().add("section-card");
 
-        Label lblTituloProductos = new Label("🏺 Productos Publicados por Tu Taller");
+        Label lblTituloProductos = new Label("Productos Publicados por Tu Taller");
         lblTituloProductos.setStyle("-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #2C1E16;");
 
         containerProductosVendedor = new VBox(12);

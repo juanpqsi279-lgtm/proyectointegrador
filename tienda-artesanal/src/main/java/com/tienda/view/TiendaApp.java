@@ -115,7 +115,7 @@ public class TiendaApp extends Application {
         VBox brandBox = new VBox(4);
         brandBox.setPadding(new Insets(0, 0, 16, 0));
 
-        Label lblBrand = new Label("🌿 Tienda Artesanal");
+        Label lblBrand = new Label("Tienda Artesanal");
         lblBrand.getStyleClass().add("brand-title");
 
         Label lblSub = new Label("Mercado de Arte Tradicional");
@@ -124,11 +124,11 @@ public class TiendaApp extends Application {
         brandBox.getChildren().addAll(lblBrand, lblSub);
 
         // Botones de Navegación
-        btnNavCatalogo = crearBotonNav("🏺  Catálogo de Artesanías");
-        btnNavDirectorio = crearBotonNav("👥  Directorio de Artesanos");
+        btnNavCatalogo = crearBotonNav("Catálogo de Artesanías");
+        btnNavDirectorio = crearBotonNav("Directorio de Artesanos");
         
         // Botón Carrito con Badge Dinámico
-        btnNavCarrito = crearBotonNav("🛒  Carrito de Compras");
+        btnNavCarrito = crearBotonNav("Carrito de Compras");
         HBox boxCarritoNav = new HBox(8);
         boxCarritoNav.setAlignment(Pos.CENTER_LEFT);
         badgeCarritoCount = new Label("0");
@@ -141,8 +141,8 @@ public class TiendaApp extends Application {
         boxCarritoNav.getChildren().addAll(btnNavCarrito, sp, badgeCarritoCount);
         boxCarritoNav.setOnMouseClicked(e -> cambiarVista("CARRITO"));
 
-        btnNavComprador = crearBotonNav("👤  Perfil Comprador");
-        btnNavVendedor = crearBotonNav("🎨  Panel del Artesano");
+        btnNavComprador = crearBotonNav("Perfil Comprador");
+        btnNavVendedor = crearBotonNav("Panel del Artesano");
 
         btnNavCatalogo.setOnAction(e -> cambiarVista("CATALOGO"));
         btnNavDirectorio.setOnAction(e -> cambiarVista("DIRECTORIO"));
@@ -277,9 +277,9 @@ public class TiendaApp extends Application {
         } else if ("Navegar_Historial".equalsIgnoreCase(solicitud)) {
             cambiarVista("COMPRADOR");
         } else if ("NOTIFICAR_DATOS_ACTUALIZADOS".equals(solicitud)) {
-            mostrarToastNotification("✅ Datos de perfil y dirección actualizados correctamente.");
+            mostrarToastNotification("Datos de perfil y dirección actualizados correctamente.");
         } else if ("ERROR_NUMERO_INVALIDO".equals(solicitud)) {
-            mostrarToastNotification("❌ Por favor ingresa un precio numérico válido (ej. 850.50).");
+            mostrarToastNotification("Por favor ingresa un precio numérico válido (ej. 850.50).");
         } else if (solicitud != null && solicitud.startsWith("VER_PERFIL_PUBLICO:")) {
             String idVendedor = solicitud.substring("VER_PERFIL_PUBLICO:".length());
             panelPerfilVendedorPublico.cargarVendedor(idVendedor);

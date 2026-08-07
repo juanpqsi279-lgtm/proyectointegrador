@@ -7,6 +7,8 @@ com\tienda\view\PerfilVendedorPanel.class
 com\tienda\model\Comprador.class
 com\tienda\model\Envio.class
 com\tienda\model\Comprador$OrdenCompra.class
+com\tienda\view\DirectorioVendedoresPanel.class
+com\tienda\view\PerfilPublicoVendedorPanel.class
 com\tienda\model\Vendedor.class
 com\tienda\controller\TiendaController.class
 com\tienda\model\ItemCarrito.class

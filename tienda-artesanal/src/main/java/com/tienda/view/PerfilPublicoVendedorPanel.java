@@ -167,7 +167,7 @@ public class PerfilPublicoVendedorPanel extends ScrollPane {
         Region spacerBottom = new Region();
         HBox.setHgrow(spacerBottom, Priority.ALWAYS);
 
-        Button btnAgregar = new Button("🛒 Agregar");
+        Button btnAgregar = new Button("Agregar");
         btnAgregar.getStyleClass().add("btn-primary");
         btnAgregar.setOnAction(e -> controller.agregarAlCarrito(prod));
 
